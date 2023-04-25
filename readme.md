@@ -73,3 +73,38 @@ to forecast the crude oil price.
     LinkedIN Silverkite was used to build two models with one model utilizing Ridge regression and the other utilizing Gradient Boosting in the fit       algorithm. 
 
     Scale Cast Library was used to build 8 different individual models including 1. Naïve Bayes, 2. Gradient Boosted trees, 3. Light Gradient              Boosting    XGBoost (Extreme Gradient Boosting), 5. Prophet, 6. Holt-Winters Exponential Smoothing, 7. LinkedIN Silverkite, and 8. ARIMA model        and all these models were used within the Cat-boost stacked regressor to build an Ensemble model. The ensembling was carried out in different        ways 1. With all the regressors (catboost_all_reg) 2. Without the Auto-regressive component i.e Without the ARIMA family models                      (catboost_signal_only) 3. With only    the ARIMA family of models (catboost_lag_only). 
+ 
+### **Results:**
+1. Exploratory Data Analysis:
+    * Fig 1: A1. European Brent crude oil price data time-series plot A. Histogram, B. Distribution of Daily Percentage Price change and C.                 Distribution of Daily percentage price change (within 5%) of European Brent crude oil price data:
+    ![EuBrentEDA](https://user-images.githubusercontent.com/115378526/234199156-f95bae69-0f42-494a-996e-2273f648ea54.jpg)
+    ![EuBrentHistograms](https://user-images.githubusercontent.com/115378526/234199211-6d6f9e3e-6fb3-4a98-9140-ca9eac3f579b.jpg)
+
+    * Fig 2: A1. U.S. Cushing crude oil price data time-series plot A. Histogram, B. Distribution of Daily Percentage Price change and C.                   Distribution of Daily percentage price change (within 5%) of United States Cushing  crude oil price data: 
+    ![CushingEDA](https://user-images.githubusercontent.com/115378526/234199292-296efdbe-73ee-4c9c-8550-88233ad31f95.jpg)
+    ![CushingHistograms](https://user-images.githubusercontent.com/115378526/234199333-1e5b2573-828a-46fc-9845-874c1ad87d1f.jpg)
+2. ML Model Analysis:
+    * Baseline model :
+    Table 1: Results of baseline model for EU Brent and U.S. Cushing crude oil price data    
+    ![BaselineResults](https://user-images.githubusercontent.com/115378526/234200372-c6032c61-e91a-4981-b739-5f36a32f5275.jpg)
+    * ARIMA Family of models:
+    The seasonal decomposition model was not used to build a forecasting product as its validation/test error was higher than than the test-error of     baseline (note: no cross validation in seasonal decomposition). Auto-ARIMA and SARIMA was used to build forecasting product and the forecasting       plot of Auto-ARIMA (the best performing model in ARIMA family) is shown below in Fig 3. 
+    Table 2: Results of Auto-ARIMA and SARIMA model on EU Brent and US Cushing crude oil price data
+    ![ArimaResults](https://user-images.githubusercontent.com/115378526/234200752-b9fc6f80-0bf0-4bc8-a5fc-fc663f2a601a.jpg)
+    Fig 3: Auto-ARIMA forecast plot on A.EU Brent and B. U.S Cushing Crude oil price data
+    ![ArimaResults](https://user-images.githubusercontent.com/115378526/234201105-f08afbf5-043e-4860-8722-560dadc87fdb.jpg)
+    * Facebook/Meta Prophet:
+    The model built with customized yearly seasonality and COVID as a one time event minimized the poor to the maximum and results are shown below in 	  table 1 consisting of the error metrics of the analysis ad forecasting product and Fig 4 depicting the visualization of the forecasting product    	 of the best model of Meta/Facebook Prophet. 
+
+    Table 3: Results of Facebook Prophet model with COVID event and customized yearly seasonality on EU Brent and U.S. Cushing crude oil price data
+    Fig 4: Facebook/Meta Prophet (with customized yearly seasonality and COVID as one time event) forecast plot on A. EU Brent and B.  U.S. Cushing 	crude oil price data
+    ![ProphetResultsPlots](https://user-images.githubusercontent.com/115378526/234201828-e92b91c7-c847-444c-8354-2a5d8a721c81.jpg)
+    
+    * LinkedIN Silverkite: 
+      The model built with gradient boosting regressor performed the best of the two models built as mentioned in the methods section. 
+
+      Table 4: Results of LinkedIn Silverkite model built with gradient boosting regressor fit on EU Brent and U.S. Cushing Crude Oil price data
+      ![SilverKiteResults](https://user-images.githubusercontent.com/115378526/234202547-7ecc16e8-a33c-4282-8233-40ca7e1584da.jpg)
+      Fig 4: LinkedIn Silverkite with gradient boosting fit method forecasting product on A. EU Brent and B. US Cushing crude oil price data
+      ![SilverKiteResultsPlots](https://user-images.githubusercontent.com/115378526/234202758-47d0b1f1-8a83-45fb-bc39-e9001a0b4d8b.jpg)
+
