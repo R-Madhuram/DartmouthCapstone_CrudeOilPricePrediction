@@ -11,6 +11,7 @@ Therefore, it is of great importance to investors, businesses, economists and po
 We chose machine learning as our problem solving frame work. The typical workflow for ML framework consisting Extract-Transform-Load (ETL) was utilized to define the problem, map the system as time series forecasting ML task, define suitable error metrics, choose suitable ML methods and time the parameters with appropriate values to evaluate the model and the forecasting product before deploying it. 
 
 _Data Extraction  —> Data Transformation —>  Data Loading/Modeling_
+![Workflow](https://user-images.githubusercontent.com/115378526/234194266-46ca5dea-3bcf-4df9-9d3d-58bbb0858919.jpg)
 
 Through out the work-flow and various processes in the workflow we followed the CRISP-DM (Cross Industry Standardized Process for Data Mining) framework which emphasizes on iteratively improving the results of each of the processes and the sub-steps in the processes.
 
