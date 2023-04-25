@@ -107,4 +107,28 @@ to forecast the crude oil price.
       ![SilverKiteResults](https://user-images.githubusercontent.com/115378526/234202547-7ecc16e8-a33c-4282-8233-40ca7e1584da.jpg)
       Fig 4: LinkedIn Silverkite with gradient boosting fit method forecasting product on A. EU Brent and B. US Cushing crude oil price data
       ![SilverKiteResultsPlots](https://user-images.githubusercontent.com/115378526/234202758-47d0b1f1-8a83-45fb-bc39-e9001a0b4d8b.jpg)
+      
+    * Scalecast Library Ensemble model:
+      Ensemble models that were built based on the eight individual models mentioned in the methods section (results can be accessed in the notebook       and in the presentation), the model with al regressors and without the lagged (ARIMA) component performed the best.
+
+      Table 5: Results of Scalecast Ensemble model using cat-boost stacking regressor built with various individual models on EU Brent and U.S.             Cushing Crude Oil price data  
+      ![StackedResults](https://user-images.githubusercontent.com/115378526/234203522-52a38832-465d-4f52-8cd4-bf04fd8bf43b.jpg)
+      ![StackedResults_Cushing](https://user-images.githubusercontent.com/115378526/234203710-ab71d3e3-bc3d-4892-9379-3d538f51b799.jpg)
+      Fig 5: Scale Cast Ensemble model using cat-boost stacking regressor using combinations of models forecasting product on A. EU Brent B. U.S.  	 Cushing crude oil price data.
+      ![EuBrentStackedPlot](https://user-images.githubusercontent.com/115378526/234204164-2d154597-1ea2-4ef5-af33-27fc5112254f.jpg)
+      ![CushingStackedPlot](https://user-images.githubusercontent.com/115378526/234204201-4b6503c2-0ea9-4d1a-8c0d-5d2041043fd4.jpg)
+      
+    * Wilcoxon Hypothesis Testing:
+
+     The cat boost stacking regressor built with all individual models (catboost_all_reg, RMSE: 6.9) for EU Brent data passed the hypothesis              indicating that there was no significant statistical difference between the forecasted values of this model and the actual price (NOTE: This is      the second best model for the EU Brent data). All other models for EU Brent data and all the models for U.S. Cushing data failed this hypothesis      testing. 
+     
+  ## **Conclusion:**
+  Through the model building and evaluation process for predictive capacity of the crude oil price, we can conclude that we have been able to bring     down the forecast RMSE nearly **~5 times down** compared to the baseline model and **~7 times down** from the lowest performing ML model (auto-       ARIMA) through stacking weak individual models into a stronger ensemble ML model. 
+
+  Since the forecast **RMSE ~3-7** (both crude oil types) for the ensemble model is **comparable with that** of previous research on crude oil price   prediction using **advanced deep learning techniques** with more complex and higher dimensional data (7, 8). 
+  
+  ## **Future Work:**
+  1. Hence, we can for future work we can fine tune the models that we have built and/or utilize better stacking method. 
+  2. We would also explore staking ML and DL models and/or increase the complexity of the data to be more representative of the crude-oil price            market.
+  3. Explore more advanced techniques like Deep learning and transformers that have been built specific for the oil and gas domain to build hybrid        models to improve the accuracy of predictions 
 
