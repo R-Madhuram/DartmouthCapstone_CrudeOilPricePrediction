@@ -30,5 +30,14 @@ to forecast the crude oil price.
 
 ### **Data-Set:**
 
-1. <u>Github Link</u>: https://github.com/datasets/oil-prices/blob/master/README.md. 
-2. <u>Description</u>: This is a publicly available data-set provided by EIA (Energy Information Administration) consisting of  price of 
+1. Github Link: https://github.com/datasets/oil-prices/blob/master/README.md. 
+2. Description: This is a publicly available data-set provided by EIA (Energy Information Administration) consisting of  price of
+    * Europe Brent Spot Price FOB (Dollars per Barrel) - From 20 May 1987 till today excluding weekends and holidays.
+    * Cushing, OK WTI Spot Price FOB (Dollars per Barrel) - From 01 February 1986 till today excluding weekends and holidays. 
+    * There are no other external regressor(s) or variables.
+    * Both the crude oil dataset have been loaded and analyzed till 27 Feb 2023 although they are updated daily. 
+3. Domain Knowledge:
+    * Brent : A blended crude stream produced in the North Sea region which serves as a reference or "marker" for pricing a number of other crude           streams source.
+    * West Texas Intermediate (WTI - Cushing): A crude stream produced in Texas and southern Oklahoma which serves as a reference or "marker" for           pricing a number of other crude streams and which is traded in the domestic spot market at Cushing, Oklahoma. 
+
+### **Methodology and Analysis:**
