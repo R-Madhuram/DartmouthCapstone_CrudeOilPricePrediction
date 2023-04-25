@@ -12,4 +12,23 @@ We chose machine learning as our problem solving frame work. The typical workflo
 
 _Data Extraction  —> Data Transformation —>  Data Loading/Modeling_
 
-![Process](https://user-images.githubusercontent.com/115378526/234191119-cd957b73-f1ff-4611-b573-c4ed3b886ee1.jpg)
+Through out the work-flow and various processes in the workflow we followed the CRISP-DM (Cross Industry Standardized Process for Data Mining) framework which emphasizes on iteratively improving the results of each of the processes and the sub-steps in the processes.
+
+## **Background:**
+
+Historically statistically based models like seasonal decompositions and ARIMA family of models along with econometric approaches have been utilized to forecast the crude oil prices and recently ML techniques have been used to capture the non-linear and more complex components of the historical price data (3, 4, 5, 6) .
+
+## **Objective:**
+
+In this work we propose to utilize ML techniques
+1. ARIMA family of models from stats libraries
+2. SOTA packages FB/Meta Prophet, LinkedIN SilverKite
+3. SOTA library ScaleCast for ensemble modeling.
+to forecast the crude oil price.
+
+## **Project Description:**
+
+### **Data-Set:**
+
+1. <u>Github Link</u>: https://github.com/datasets/oil-prices/blob/master/README.md. 
+2. <u>Description</u>: This is a publicly available data-set provided by EIA (Energy Information Administration) consisting of  price of 
