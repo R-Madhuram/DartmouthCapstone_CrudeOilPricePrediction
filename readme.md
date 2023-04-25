@@ -42,3 +42,34 @@ to forecast the crude oil price.
     * West Texas Intermediate (WTI - Cushing): A crude stream produced in Texas and southern Oklahoma which serves as a reference or "marker" for           pricing a number of other crude streams and which is traded in the domestic spot market at Cushing, Oklahoma. 
 
 ### **Methodology and Analysis:**
+
+1. Exploratory Data Analysis: 
+   The data was explored using Matplotlib  for visualizations of the time series data and find patterns/insights from the data and Pandas was used to    compute data with aggregation to derive insights on any seasonal trends.
+2. Training and Forecast Data: 
+   The data from the Jan 1, 2021 till Feb 27, 2023 was used for forecasting by the ML model and to compare the models performance with the actual        data and the validation error. The rest of the historical data was utilized for training and building the ML models for both the crude oil types.
+3. Hypothesis:
+    * Error-metric: 
+       MSE and RMSE was chosen as the error-metric to evaluate the benchmark model (baseline model) and compare it with other ML models to                  evaluate the predictive ability. Models with lower error metrics than the baseline model were chosen for building the forecasting-product. 
+    * Wilcoxon Hypothesis Testing: 
+       This test was performed on the best models of the two crude oil types to determine if the forecasted data series is significantly                    different from the actual price data series of the crude oils. The hypothesis is defined as follows: 
+               H0 : Significant difference between the datasets. So, model cannot be accepted.
+	            H1 : Not a significant difference between the dataset. Hence, we reject the null hypothesis and accept the model we built.  
+ 4. Cross-validation: 
+    Slide forward cross-validation was utilized with two business year (506 days) data used to forecast one business month (22 days) of data             splitting the entire training data into ~400 Cross-validation window. The animation below shows the CV strategy that we adopted for both the         crude oil-types where the forecasted values closely follows the actual values. (Note : the forecasting shown in this CV is through the Auto-ARIMA     model).
+    A. EU Brent:
+    ![ezgif-5-fe739595a2](https://user-images.githubusercontent.com/115378526/234197003-2fb27681-48b4-4b3a-96e8-ca3510c399b5.gif)
+    
+    B. Cushing:    
+    ![ezgif-5-fb49452308](https://user-images.githubusercontent.com/115378526/234197948-bc6e920b-69a0-4c0a-81d0-65675db95c24.gif)
+
+    
+ 5. ML Methods:
+    Baseline Model with training and test data with the mean of the price of the respective data calculated for both he crude oil types to compute       the error metrics. 
+
+    ARIMA Family of Models including seasonal decomposition, Auto-ARIMA and SARIMA were evaluated iteratively to forecast the crude oil price on the     test data.
+
+    Facebook Prophet was utilized to build their different model 1. With default vales 2. With covid period as a one time event 3. Customized yearly     seasonality with Covid event. 
+
+    LinkedIN Silverkite was used to build two models with one model utilizing Ridge regression and the other utilizing Gradient Boosting in the fit       algorithm. 
+
+    Scale Cast Library was used to build 8 different individual models including 1. Naïve Bayes, 2. Gradient Boosted trees, 3. Light Gradient              Boosting    XGBoost (Extreme Gradient Boosting), 5. Prophet, 6. Holt-Winters Exponential Smoothing, 7. LinkedIN Silverkite, and 8. ARIMA model        and all these models were used within the Cat-boost stacked regressor to build an Ensemble model. The ensembling was carried out in different        ways 1. With all the regressors (catboost_all_reg) 2. Without the Auto-regressive component i.e Without the ARIMA family models                      (catboost_signal_only) 3. With only    the ARIMA family of models (catboost_lag_only). 
