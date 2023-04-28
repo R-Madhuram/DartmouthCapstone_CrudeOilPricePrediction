@@ -112,27 +112,22 @@ to forecast the crude oil price.
       Fig. 4: Forecasting products of the individual models (1. Naive, 2. GBT (Gradient Boosted Trees), 3. LightGBM, 4. XGBoost (Extreme Gradient Boosting) 5. Facebook/Meta prophet, 6. Holt Winter's Exponential Smoothing, 7. LinkedIn Silverkit and 8. ARIMA built within scalecast) built with and without cross-validation using Scalecast library for A. EU Brent and B. U.S. CUshing crude oil price data. 
       ![Fig4](https://user-images.githubusercontent.com/115378526/235260221-eef92895-5c63-45c6-ab3f-f724f223c56d.png)
 
-      Table. 3: Results of the error-metric of ensemble ML model built using catboost regressors with various combinations of individual models (catboost_all_reg: all regressors included, catboost_signals_only: ARIMA not included, catboost_lags_only: Only ARIMA included) for EU Brent and U.S. Cushing crude oil price data
+      Table. 3: Results of the error-metric of ensemble ML model built using catboost regressors with various combinations of individual models (catboost_all_reg: all regressors included, catboost_signals_only: ARIMA not included, catboost_lags_only: Only ARIMA included) built using scalecast library for EU Brent and U.S. Cushing crude oil price data
       ![Table3](https://user-images.githubusercontent.com/115378526/235261572-817177bc-d0b2-44da-b204-2d2e23d220df.png)
 
       
       
       
-      Fig 5: Scale Cast Ensemble model using cat-boost stacking regressor using combinations of models forecasting product on A. EU Brent B. U.S.  	 Cushing crude oil price data.
-      ![EuBrentStackedPlot](https://user-images.githubusercontent.com/115378526/234204164-2d154597-1ea2-4ef5-af33-27fc5112254f.jpg)
-      ![CushingStackedPlot](https://user-images.githubusercontent.com/115378526/234204201-4b6503c2-0ea9-4d1a-8c0d-5d2041043fd4.jpg)
-      
-    * Wilcoxon Hypothesis Testing:
-
-     The cat boost stacking regressor built with all individual models (catboost_all_reg, RMSE: 6.9) for EU Brent data passed the hypothesis              indicating that there was no significant statistical difference between the forecasted values of this model and the actual price (NOTE: This is      the second best model for the EU Brent data). All other models for EU Brent data and all the models for U.S. Cushing data failed this hypothesis      testing. 
+      Fig 5: Forecasting product of each ensemble ML model built using catboost regressor with various combinations of individual  models (catboost_all_reg: all regressors included, catboost_signals_only: ARIMA not included, catboost_lags_only: Only ARIMA included) built using scalecast library for A. EU Brent and B. U.S. Cushing crude oil price data
+      ![Fig5](https://user-images.githubusercontent.com/115378526/235262077-5b201c53-c782-448f-a66e-0dc63d302ea7.png)
      
   ## **Conclusion:**
   Through the model building and evaluation process for predictive capacity of the crude oil price, we can conclude that we have been able to bring     down the forecast RMSE nearly **~5 times down** compared to the baseline model and **~7 times down** from the lowest performing ML model (auto-       ARIMA) through stacking weak individual models into a stronger ensemble ML model. 
 
-  Since the forecast **RMSE ~3-7** (both crude oil types) for the ensemble model is **comparable with that** of previous research on crude oil price   prediction using **advanced deep learning techniques** with more complex and higher dimensional data (7, 8). 
+  Since the forecast **RMSE ~3-7** (both crude oil types) for the ensemble model is **comparable with that** of previous research on crude oil price   prediction using **advanced deep learning techniques** with more complex and higher dimensional data (7, 8), there is scope for further exploration of more ML techniques to improve the predictive capacity for the given crude oil price data.
   
   ## **Future Work:**
-  1. Hence, we can for future work we can fine tune the models that we have built and/or utilize better stacking method. 
+  1. Hence, for future work we can fine tune the models that we have built and/or utilize better stacking method using libraries that include methods like N-BEATS etc. 
   2. We would also explore staking ML and DL models and/or increase the complexity of the data to be more representative of the crude-oil price            market.
   3. Explore more advanced techniques like Deep learning and transformers that have been built specific for the oil and gas domain to build hybrid        models to improve the accuracy of predictions 
 
