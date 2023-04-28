@@ -1,6 +1,7 @@
 # **Exploration of Machine Learning Techniques to Predict Crude Oil Price**
 
 ## ** Technical Presentation Video (00h:20m:38s):**
+https://user-images.githubusercontent.com/115378526/235265185-81044dcf-454a-4052-9386-e8fdc196cf5e.mp4
 
 ## **Problem Statement and purpose:**
 Crude oil a.k.a “Industrial Blood” is the largest traded commodity in the world accounting to ~10% of the world traded commodities (1) . Hence, any fluctuations in crude oil price impacts the national and global economy (2). 
