@@ -17,7 +17,7 @@ Through out the work-flow and various processes in the workflow we followed the 
 
 ## **Background:**
 
-Historically statistically based models like seasonal decompositions and ARIMA family of models along with econometric approaches have been utilized to forecast the crude oil prices and recently ML techniques have been used to capture the non-linear and more complex components of the historical price data (3, 4, 5, 6) .
+Historically statistically based models like seasonal decompositions and ARIMA family of models along with econometric approaches have been utilized to forecast the crude oil prices and recently ML techniques have been used to capture the non-linear and more complex components of the historical price data (3, 4, 5) .
 
 ## **Objective:**
 
@@ -124,10 +124,20 @@ to forecast the crude oil price.
   ## **Conclusion:**
   Through the model building and evaluation process for predictive capacity of the crude oil price, we can conclude that we have been able to bring     down the forecast RMSE nearly **~5 times down** compared to the baseline model and **~7 times down** from the lowest performing ML model (auto-       ARIMA) through stacking weak individual models into a stronger ensemble ML model. 
 
-  Since the forecast **RMSE ~3-7** (both crude oil types) for the ensemble model is **comparable with that** of previous research on crude oil price   prediction using **advanced deep learning techniques** with more complex and higher dimensional data (7, 8), there is scope for further exploration of more ML techniques to improve the predictive capacity for the given crude oil price data.
+  Since the forecast **RMSE ~3-7** (both crude oil types) for the ensemble model is **comparable with that** of previous research on crude oil price   prediction using **advanced deep learning techniques** with more complex and higher dimensional data (6, 7), there is scope for further exploration of more ML techniques to improve the predictive capacity for the given crude oil price data.
   
   ## **Future Work:**
   1. Hence, for future work we can fine tune the models that we have built and/or utilize better stacking method using libraries that include methods like N-BEATS etc. 
   2. We would also explore staking ML and DL models and/or increase the complexity of the data to be more representative of the crude-oil price            market.
   3. Explore more advanced techniques like Deep learning and transformers that have been built specific for the oil and gas domain to build hybrid        models to improve the accuracy of predictions 
+  
+  ## **References:**
+  1. https://www.forex.com/ie/news-and-analysis/top-ten-most-traded-global-commodities/#:~:text=Brent%20Crude%20oil%20is%20the,expensive%20than%20WTI%20crude%20oil.
+  2. Abd Elaziz, M.; Ewees, A.A.; Alameer, Z. 2020. Improving adaptive neuro-fuzzy inference system based on a modified salp swarm algorithm using genetic algorithm to forecast crude oil price. Natural Resource Research, 29, 2671–2686.
+  3. Wu, X.P.; Li, Z.M. 2013. Risk measures for WTI spot market based on GARCH model. J. Hefei Univ. Technol. 9, 1127–1131.
+  4. Cheng, F.Z.; Li, T.; Wei, Y.M.; Fan, T.J. The VEC-NAR model for short-term forecasting of oil prices. 2019. Energy Economy. 78, 656–667.
+  5. Cheng, F.Z.; Fan, T.J.; Fan, D.D.; Li, S.L. 2018.  The prediction of oil price turning points with log-periodic power law and multi- population genetic algorithm. Energy Econ. 72, 341–355.
+  6. Wang, D.; Fang, T. Forecasting Crude Oil Prices with a WT-FNN Model. 2022. Energies. 15, 1955.
+  7. Bai, Y., Li, X., & Jia, S. 2021. Crude oil price forecasting incorporating news text. International Journal of Forecasting. 38(1), 367-383.
+  
 
