@@ -88,25 +88,22 @@ to forecast the crude oil price.
     The results of baseline model analysis are presented in Table 1.   
     
     * ARIMA Family of models:
-    The seasonal decomposition model was not used to build a forecasting product as its validation/test error was higher than than the test-error of     baseline (note: no cross validation in seasonal decomposition). Auto-ARIMA and SARIMA was used to build forecasting product and the forecasting       plot of Auto-ARIMA (the best performing model in ARIMA family) is shown below in Fig 3. Since the performance of Auto-ARIMA and SARIMA were comparable the results of the models have been tabulated in Table1. 
+    The seasonal decomposition model was not used to build a forecasting product as its validation/test error was higher than than the test-error of     baseline (note: no cross validation in seasonal decomposition). Auto-ARIMA and SARIMA was used to build forecasting product and the forecasting       plot of Auto-ARIMA (the best performing model in ARIMA family) is shown below in Fig. 3. Since the performance of Auto-ARIMA and SARIMA were comparable the results of the models have been tabulated in Table. 1. 
     
     * Facebook/Meta Prophet:
-    The model built with customized yearly seasonality and COVID as a one time event minimized the poor to the maximum and results are shown below in 	  table 1 consisting of the error metrics of the analysis ad forecasting product and Fig 4 depicting the visualization of the forecasting product    	 of the best model of Meta/Facebook Prophet. 
-
-    Table 3: Results of Facebook Prophet model with COVID event and customized yearly seasonality on EU Brent and U.S. Cushing crude oil price data
-    Fig 4: Facebook/Meta Prophet (with customized yearly seasonality and COVID as one time event) forecast plot on A. EU Brent and B.  U.S. Cushing 	crude oil price data
-    ![ProphetResultsPlots](https://user-images.githubusercontent.com/115378526/234201828-e92b91c7-c847-444c-8354-2a5d8a721c81.jpg)
+    The model built with customized yearly seasonality and COVID as a one time event minimized the poor to the maximum and results are shown below in 	  Table. 1 consisting of the error metrics of the analysis. The forecasting product (Fig. 3) depicting the visualization of the forecasted values    	 of the best model of Meta/Facebook Prophet also containes the band for probablity density of the evaluated forecasted values by the model. 
     
     * LinkedIN Silverkite: 
-      The model built with gradient boosting regressor performed the best of the two models built as mentioned in the methods section. 
+      The model built with gradient boosting regressor performed the best of the two models built as mentioned in the methods section. As observed in Table. 1, the LinkedIn Silverkite model had the best forecasting accuracy of all the individual models built with their respective libraries. The forecasting product of LinnkedIn silverkite built in this analysis is presented in Fig.3. 
 
-      Table 4: Results of LinkedIn Silverkite model built with gradient boosting regressor fit on EU Brent and U.S. Cushing Crude Oil price data
-      ![SilverKiteResults](https://user-images.githubusercontent.com/115378526/234202547-7ecc16e8-a33c-4282-8233-40ca7e1584da.jpg)
-      Fig 4: LinkedIn Silverkite with gradient boosting fit method forecasting product on A. EU Brent and B. US Cushing crude oil price data
-      ![SilverKiteResultsPlots](https://user-images.githubusercontent.com/115378526/234202758-47d0b1f1-8a83-45fb-bc39-e9001a0b4d8b.jpg)
+      Table. 1: Error-metric (MSE and RMSE) Results of 1. Baseline 2. ARMA family 3. Facebook/Meta Prophet and 4. LinkedIn Silverkite model built with their respective libraries gradient EU Brent and U.S. Cushing Crude Oil price data
+      ![Table1](https://user-images.githubusercontent.com/115378526/235256752-bf3ef6d9-ac32-4357-9949-efe6289e6f24.png)
+
+      Fig. 3:  Forecasting product best performing model of 1. Auto-ARIMA 2. Facebook/Meta Prophet 3. LinkedIn SIlverkite on A. EU Brent and B. U.S. Cushing crude oil price data
+      ![Fig3](https://user-images.githubusercontent.com/115378526/235257154-9ee2af69-c547-414c-99ed-64c86b21d4ee.png)
       
     * Scalecast Library Ensemble model:
-      Ensemble models that were built based on the eight individual models mentioned in the methods section (results can be accessed in the notebook       and in the presentation), the model with al regressors and without the lagged (ARIMA) component performed the best.
+      Ensemble models that were built based on the eight individual models mentioned in the methods section. (results can be accessed in the notebook       and in the presentation), the model with al regressors and without the lagged (ARIMA) component performed the best.
 
       Table 5: Results of Scalecast Ensemble model using cat-boost stacking regressor built with various individual models on EU Brent and U.S.             Cushing Crude Oil price data  
       ![StackedResults](https://user-images.githubusercontent.com/115378526/234203522-52a38832-465d-4f52-8cd4-bf04fd8bf43b.jpg)
