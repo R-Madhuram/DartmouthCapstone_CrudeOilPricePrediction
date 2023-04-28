@@ -97,7 +97,7 @@ to forecast the crude oil price.
       The model built with gradient boosting regressor performed the best of the two models built as mentioned in the methods section. As observed in Table. 1, the LinkedIn Silverkite model had the best forecasting accuracy of all the individual models built with their respective libraries. The forecasting product of LinnkedIn silverkite built in this analysis is presented in Fig.3. 
 
       Table. 1: Error-metric (MSE and RMSE) Results of 1. Baseline 2. ARMA family 3. Facebook/Meta Prophet and 4. LinkedIn Silverkite model built with their respective libraries gradient EU Brent and U.S. Cushing Crude Oil price data
-      ![Table1](https://user-images.githubusercontent.com/115378526/235256752-bf3ef6d9-ac32-4357-9949-efe6289e6f24.png)
+     ![Table1a](https://user-images.githubusercontent.com/115378526/235257869-820e3b54-29ef-4c5e-8a02-353c6662ecf3.png)
 
       Fig. 3:  Forecasting product best performing model of 1. Auto-ARIMA 2. Facebook/Meta Prophet 3. LinkedIn SIlverkite on A. EU Brent and B. U.S. Cushing crude oil price data
       ![Fig3](https://user-images.githubusercontent.com/115378526/235257154-9ee2af69-c547-414c-99ed-64c86b21d4ee.png)
