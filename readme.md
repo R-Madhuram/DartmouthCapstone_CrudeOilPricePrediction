@@ -141,7 +141,7 @@ to forecast the crude oil price.
   7. Bai, Y., Li, X., & Jia, S. 2021. Crude oil price forecasting incorporating news text. International Journal of Forecasting. 38(1), 367-383.
   
   ## ** Contributors:**
-  1. Madhuram Ravichandran
+  1. Madhuram Ravichandran (https://github.com/R-Madhuram)
   2. Dr. Pol Cusco (https://github.com/nanakiksc)
   3. Viswajith Karapoonding Nott (https://github.com/viswajithkn)
   
