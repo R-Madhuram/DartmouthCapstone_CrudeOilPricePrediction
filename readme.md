@@ -106,11 +106,14 @@ to forecast the crude oil price.
       The results of the individual models, as mentioned in the methods section, built with cross-validation and with no validation data set i.e. only train and test/forecast set can be found in Table. 2 for both European Brent and U.S cushing crude oil price. The forecasting products built with these ML models using Scalecast library are presented in Fig. 4. The product of both cross-validate model and model without cross-validation are also presented within the respective plots of the individual models. 
       Ensemble models built with combinations of these eight models are presented in Table. 3 for both types of crude oil. The forecasting product of all the ensemble models built have also been presented in Fig. 5.
 
-      Table. 2: Results of Error metric (MSE and RMSE) of the individual models (with and without cross-validation) built with Scalecast library for European Brent and U.S. Cushing crude oil price. 
+      Table. 2: Results of Error metric (MSE and RMSE) of the individual models (with and without cross-validation) built with Scalecast library for European Brent and U.S. Cushing crude oil price data. 
       ![Table2](https://user-images.githubusercontent.com/115378526/235259147-858f2c9e-cb0c-4f22-9d97-e38f957cc501.png)
 	
-      Fig. 4: Forecasting products of the individual models (1. Naive, 2. GBT (Gradient Boosted Trees), 3. LightGBM, 4. XGBoost (Extreme Gradient Boosting) 5. Facebook/Meta prophet, 6. Holt Winter's Exponential Smoothing, 7. LinkedIn Silverkit and 8. ARIMA built within scalecast) built with and without cross-validation using Scalecast library.
+      Fig. 4: Forecasting products of the individual models (1. Naive, 2. GBT (Gradient Boosted Trees), 3. LightGBM, 4. XGBoost (Extreme Gradient Boosting) 5. Facebook/Meta prophet, 6. Holt Winter's Exponential Smoothing, 7. LinkedIn Silverkit and 8. ARIMA built within scalecast) built with and without cross-validation using Scalecast library for A. EU Brent and B. U.S. CUshing crude oil price data. 
       ![Fig4](https://user-images.githubusercontent.com/115378526/235260221-eef92895-5c63-45c6-ab3f-f724f223c56d.png)
+
+      Table. 3: Results of the error-metric of ensemble ML model built using catboost regressors with various combinations of individual models (catboost_all_reg: all regressors included, catboost_signals_only: ARIMA not included, catboost_lags_only: Only ARIMA included) for EU Brent and U.S. Cushing crude oil price data
+      ![Table3](https://user-images.githubusercontent.com/115378526/235261572-817177bc-d0b2-44da-b204-2d2e23d220df.png)
 
       
       
