@@ -99,15 +99,22 @@ to forecast the crude oil price.
       Table. 1: Error-metric (MSE and RMSE) Results of 1. Baseline 2. ARMA family 3. Facebook/Meta Prophet and 4. LinkedIn Silverkite model built with their respective libraries gradient EU Brent and U.S. Cushing Crude Oil price data
      ![Table1a](https://user-images.githubusercontent.com/115378526/235257869-820e3b54-29ef-4c5e-8a02-353c6662ecf3.png)
 
-      Fig. 3:  Forecasting product best performing model of 1. Auto-ARIMA 2. Facebook/Meta Prophet 3. LinkedIn SIlverkite on A. EU Brent and B. U.S. Cushing crude oil price data
+      Fig. 3:  Forecasting product of best performing model of 1. Auto-ARIMA 2. Facebook/Meta Prophet 3. LinkedIn SIlverkite on A. EU Brent and B. U.S. Cushing crude oil price data
       ![Fig3](https://user-images.githubusercontent.com/115378526/235257154-9ee2af69-c547-414c-99ed-64c86b21d4ee.png)
       
     * Scalecast Library Ensemble model:
-      Ensemble models that were built based on the eight individual models mentioned in the methods section. (results can be accessed in the notebook       and in the presentation), the model with al regressors and without the lagged (ARIMA) component performed the best.
+      The results of the individual models, as mentioned in the methods section, built with cross-validation and with no validation data set i.e. only train and test/forecast set can be found in Table. 2 for both European Brent and U.S cushing crude oil price. The forecasting products built with these ML models using Scalecast library are presented in Fig. 4. The product of both cross-validate model and model without cross-validation are also presented within the respective plots of the individual models. 
+      Ensemble models built with combinations of these eight models are presented in Table. 3 for both types of crude oil. The forecasting product of all the ensemble models built have also been presented in Fig. 5.
 
-      Table 5: Results of Scalecast Ensemble model using cat-boost stacking regressor built with various individual models on EU Brent and U.S.             Cushing Crude Oil price data  
-      ![StackedResults](https://user-images.githubusercontent.com/115378526/234203522-52a38832-465d-4f52-8cd4-bf04fd8bf43b.jpg)
-      ![StackedResults_Cushing](https://user-images.githubusercontent.com/115378526/234203710-ab71d3e3-bc3d-4892-9379-3d538f51b799.jpg)
+      Table. 2: Results of Error metric (MSE and RMSE) of the individual models (with and without cross-validation) built with Scalecast library for European Brent and U.S. Cushing crude oil price. 
+      ![Table2](https://user-images.githubusercontent.com/115378526/235259147-858f2c9e-cb0c-4f22-9d97-e38f957cc501.png)
+	
+      Fig. 4: Forecasting products of the individual models (1. Naive, 2. GBT (Gradient Boosted Trees), 3. LightGBM, 4. XGBoost (Extreme Gradient Boosting) 5. Facebook/Meta prophet, 6. Holt Winter's Exponential Smoothing, 7. LinkedIn Silverkit and 8. ARIMA built within scalecast) built with and without cross-validation using Scalecast library.
+      ![Fig4](https://user-images.githubusercontent.com/115378526/235260221-eef92895-5c63-45c6-ab3f-f724f223c56d.png)
+
+      
+      
+      
       Fig 5: Scale Cast Ensemble model using cat-boost stacking regressor using combinations of models forecasting product on A. EU Brent B. U.S.  	 Cushing crude oil price data.
       ![EuBrentStackedPlot](https://user-images.githubusercontent.com/115378526/234204164-2d154597-1ea2-4ef5-af33-27fc5112254f.jpg)
       ![CushingStackedPlot](https://user-images.githubusercontent.com/115378526/234204201-4b6503c2-0ea9-4d1a-8c0d-5d2041043fd4.jpg)
