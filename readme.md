@@ -1,6 +1,6 @@
 # **Exploration of Machine Learning Techniques to Predict Crude Oil Price**
 
-## **Presentation and Demo Video (00h:20m:38s):**
+## ** Technical Presentation Video (00h:20m:38s):**
 
 ## **Problem Statement and purpose:**
 Crude oil a.k.a “Industrial Blood” is the largest traded commodity in the world accounting to ~10% of the world traded commodities (1) . Hence, any fluctuations in crude oil price impacts the national and global economy (2). 
@@ -85,14 +85,11 @@ to forecast the crude oil price.
     ![CushingHistograms](https://user-images.githubusercontent.com/115378526/234199333-1e5b2573-828a-46fc-9845-874c1ad87d1f.jpg)
 2. ML Model Analysis:
     * Baseline model :
-    Table 1: Results of baseline model for EU Brent and U.S. Cushing crude oil price data    
-    ![BaselineResults](https://user-images.githubusercontent.com/115378526/234200372-c6032c61-e91a-4981-b739-5f36a32f5275.jpg)
+    The results of baseline model analysis are presented in Table 1.   
+    
     * ARIMA Family of models:
-    The seasonal decomposition model was not used to build a forecasting product as its validation/test error was higher than than the test-error of     baseline (note: no cross validation in seasonal decomposition). Auto-ARIMA and SARIMA was used to build forecasting product and the forecasting       plot of Auto-ARIMA (the best performing model in ARIMA family) is shown below in Fig 3. 
-    Table 2: Results of Auto-ARIMA and SARIMA model on EU Brent and US Cushing crude oil price data
-    ![ArimaResults](https://user-images.githubusercontent.com/115378526/234200752-b9fc6f80-0bf0-4bc8-a5fc-fc663f2a601a.jpg)
-    Fig 3: Auto-ARIMA forecast plot on A.EU Brent and B. U.S Cushing Crude oil price data
-    ![ArimaResults](https://user-images.githubusercontent.com/115378526/234201105-f08afbf5-043e-4860-8722-560dadc87fdb.jpg)
+    The seasonal decomposition model was not used to build a forecasting product as its validation/test error was higher than than the test-error of     baseline (note: no cross validation in seasonal decomposition). Auto-ARIMA and SARIMA was used to build forecasting product and the forecasting       plot of Auto-ARIMA (the best performing model in ARIMA family) is shown below in Fig 3. Since the performance of Auto-ARIMA and SARIMA were comparable the results of the models have been tabulated in Table1. 
+    
     * Facebook/Meta Prophet:
     The model built with customized yearly seasonality and COVID as a one time event minimized the poor to the maximum and results are shown below in 	  table 1 consisting of the error metrics of the analysis ad forecasting product and Fig 4 depicting the visualization of the forecasting product    	 of the best model of Meta/Facebook Prophet. 
 
