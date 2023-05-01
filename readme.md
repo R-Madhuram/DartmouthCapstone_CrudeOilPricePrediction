@@ -27,7 +27,8 @@ Historically statistically based models like seasonal decompositions and ARIMA f
 In this work we propose to utilize ML techniques
 1. ARIMA family of models from stats libraries
 2. SOTA packages FB/Meta Prophet, LinkedIN SilverKite
-3. SOTA library ScaleCast for ensemble modeling.
+3. SOTA library ScaleCast for ensemble modeling
+
 to forecast the crude oil price.
 
 ## **Project Description:**
